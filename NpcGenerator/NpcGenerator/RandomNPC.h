@@ -1,6 +1,6 @@
 #pragma once
 
-//#include "CharacterClasses.cpp";
+#include "CharacterClass.cpp";
 
 namespace NpcGenerator {
 
@@ -631,13 +631,14 @@ namespace NpcGenerator {
 	private: System::Void RandomNPC_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btn_generate_npc_Click(System::Object^ sender, System::EventArgs^ e) {
-		//human character;
-		//character.setHuman();
+		character npc;
+		npc.setAge();
 
+		lbl_age_output->Text = gcnew String(Convert::ToString(npc.age));
 		/*lbl_race_output->Text = gcnew String(character.race.c_str());
 		lbl_gender__output->Text = gcnew String(character.gender.c_str());
 		lbl_sOrientation_output->Text = gcnew String(character.sexOrientation.c_str());
-		lbl_age_output->Text = gcnew String(to_string(character.age).c_str());*/
+		*/
 	}
 	};
 }
