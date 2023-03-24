@@ -1,8 +1,8 @@
 #pragma once
 
-//#include "RandomNPC.h";
-//#include "NPCList.h";
-//#include "Settings.h";
+#include "RandomNPC.h";
+#include "NPCList.h";
+#include "Settings.h";
 
 using namespace std;
 
@@ -227,6 +227,7 @@ namespace NpcGenerator {
 			this->Controls->Add(this->panel_Titulo);
 			this->Controls->Add(this->panelCentral);
 			this->Controls->Add(this->panelLateral);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"NPC Generator";
@@ -254,7 +255,7 @@ namespace NpcGenerator {
 
 	private: System::Void btn_npc_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Abrimos el formulario correspondiente
-		//this->openPanel(gcnew DnDNPCGenerator::RandomNPC);
+		this->openPanel(gcnew NpcGenerator::RandomNPC);
 		//Cambiamos el color de los botones
 		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(14, 131, 136);
 		this->btn_list->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
@@ -263,7 +264,7 @@ namespace NpcGenerator {
 	}
 	private: System::Void btn_list_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Abrimos el formulario correspondiente
-		//this->openPanel(gcnew DnDNPCGenerator::NPCList);
+		this->openPanel(gcnew NpcGenerator::NPCList);
 		//Cambiamos el color de los botones
 		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
 		this->btn_list->BackColor = System::Drawing::Color::FromArgb(14, 131, 136);
@@ -271,7 +272,7 @@ namespace NpcGenerator {
 	}
 	private: System::Void btn_ajustes_Click(System::Object^ sender, System::EventArgs^ e) {
 		//Abrimos el formulario correspondiente
-		//this->openPanel(gcnew DnDNPCGenerator::Settings);
+		this->openPanel(gcnew NpcGenerator::Settings);
 		//Cambiamos el color de los botones
 		this->btn_npc->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
 		this->btn_list->BackColor = System::Drawing::Color::FromArgb(46, 79, 79);
