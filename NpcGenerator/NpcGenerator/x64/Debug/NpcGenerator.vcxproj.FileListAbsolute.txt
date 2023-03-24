@@ -1,0 +1,4 @@
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\x64\Debug\NpcGenerator.vcxproj.AssemblyReference.cache
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\x64\Debug\NpcGenerator.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\x64\Debug\NpcGenerator.MainForm.resources
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\x64\Debug\NpcGenerator.vcxproj.GenerateResource.cache
