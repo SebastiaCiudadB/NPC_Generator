@@ -1,3 +1,5 @@
 ﻿  CharacterClass.cpp
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   CharacterClass.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   NpcGenerator.vcxproj -> C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\x64\Debug\NpcGenerator.exe
