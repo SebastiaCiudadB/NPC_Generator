@@ -12,8 +12,7 @@ public:
 
 	String^ size;
 	String^ constitution;
-	float weight;
-	float height;
+	double height;
 
 	String^ skinColor;
 	String^ eyeColor;
@@ -75,19 +74,74 @@ public:
 	}
 
 	void setSize() {
-
+		/*There is :
+		* - Tiny = 2,5 ft
+		* - Small = 5 ft
+		* - Medium = 5 ft
+		*/
+		size = "Medium"; 
 	}
 
 	void setConstitution() {
+		int slimProb = 20;
+		int skinnyProb = 20;
+		int normalProb = 20;
+		int strongProb = 20;
+		int muscularProb = 20;
 
-	}
+		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
 
-	void setWeight() {
+		int maxNum = 100;
+		int aux = rand->Next(1, maxNum + 1);
 
+		int newA, newB, newC, newD, newE;
+		newA = maxNum / 100 * slimProb;
+		newB = newA + maxNum / 100 * skinnyProb;
+		newC = newB + maxNum / 100 * normalProb;
+		newD = newC + maxNum / 100 * strongProb;
+		newE = newD + maxNum / 100 * muscularProb;
+
+		if (aux < newA) {
+			constitution = "Slim";
+		}
+		else if (aux >= newA && aux < newB) {
+			constitution = "Skinny";
+		}
+		else if (aux >= newB && aux < newC) {
+			constitution = "Normal";
+		}
+		else if (aux >= newC && aux < newD) {
+			constitution = "Strong";
+		}
+		else if (aux >= newD && aux < newE) {
+			constitution = "Muscular";
+		}
 	}
 
 	void setHeight() {
+		double minHeight;
+		double maxHeight;
 
+		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
+
+		/*if (size == "Tiny") {
+			minHeight = 0.1;
+			maxHeight = 0.6;
+
+			height = minHeight + (rand->NextDouble() * maxHeight);
+		}
+		else if (size == "Small") {
+			minHeight = 0.6;
+			maxHeight = 1.3;
+
+			height = minHeight + (rand->NextDouble() * maxHeight);
+		}
+		else if (size == "Medium") {
+			minHeight = 1.3;
+			maxHeight = 2.6;
+
+			height = minHeight + (rand->NextDouble() * maxHeight);
+		}*/
 	}
 };
 
@@ -98,6 +152,9 @@ public:
 		setGender();
 		setSexualOrientation();
 		setAge();
+		setSize();
+		setConstitution();
+		setHeight();
 	}
 
 };
@@ -109,6 +166,9 @@ public:
 		setGender();
 		setSexualOrientation();
 		setAge();
+		setSize();
+		setConstitution();
+		setHeight();
 	}
 
 	void setAge() {

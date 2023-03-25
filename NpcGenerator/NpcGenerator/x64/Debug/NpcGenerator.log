@@ -1,5 +1,31 @@
 ﻿  CharacterClass.cpp
 C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(122,10): warning C4101: 'minHeight': unreferenced local variable
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(123,10): warning C4101: 'maxHeight': unreferenced local variable
+  MainForm.cpp
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\MainForm.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\RandomNPC.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(122,10): warning C4101: 'minHeight': unreferenced local variable
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(123,10): warning C4101: 'maxHeight': unreferenced local variable
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\RandomNPC.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\RandomNPC.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\MainForm.h(4,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\MainForm.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\MainForm.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  NPCList.cpp
+  RandomNPC.cpp
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\RandomNPC.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(122,10): warning C4101: 'minHeight': unreferenced local variable
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\CharacterClass.cpp(123,10): warning C4101: 'maxHeight': unreferenced local variable
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\RandomNPC.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\NpcGenerator\RandomNPC.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Settings.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
   CharacterClass.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   NpcGenerator.vcxproj -> C:\Users\sebas\Documents\GitHub\NPC_Generator\NpcGenerator\x64\Debug\NpcGenerator.exe

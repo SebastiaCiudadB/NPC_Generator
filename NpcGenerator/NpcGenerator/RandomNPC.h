@@ -651,6 +651,10 @@ namespace NpcGenerator {
 		lbl_race_output->Text = npc->race;
 		lbl_gender__output->Text = npc->gender;
 		lbl_sOrientation_output->Text = npc->sexualOrientation;
+
+		lbl_size_output->Text = npc->size;
+		lbl_constitution_output->Text = npc->constitution;
+		lbl_height_output->Text = gcnew String(Convert::ToString(npc->height));
 	}
 	};
 }
