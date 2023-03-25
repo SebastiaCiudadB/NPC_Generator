@@ -631,14 +631,13 @@ namespace NpcGenerator {
 	private: System::Void RandomNPC_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btn_generate_npc_Click(System::Object^ sender, System::EventArgs^ e) {
-		character npc;
-		npc.setAge();
+		human npc;
+		npc.setCharacter();
 
 		lbl_age_output->Text = gcnew String(Convert::ToString(npc.age));
-		/*lbl_race_output->Text = gcnew String(character.race.c_str());
-		lbl_gender__output->Text = gcnew String(character.gender.c_str());
-		lbl_sOrientation_output->Text = gcnew String(character.sexOrientation.c_str());
-		*/
+		lbl_race_output->Text = npc.race;
+		lbl_gender__output->Text = npc.gender;
+		lbl_sOrientation_output->Text = npc.sexualOrientation;
 	}
 	};
 }
