@@ -24,6 +24,10 @@ public:
 
 	}
 
+	void setCharacter() {
+
+	}
+
 	void setGender() {
 		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
 
@@ -69,18 +73,50 @@ public:
 
 		age = rand->Next(minAge, maxAge + 1);
 	}
+
+	void setSize() {
+
+	}
+
+	void setConstitution() {
+
+	}
+
+	void setWeight() {
+
+	}
+
+	void setHeight() {
+
+	}
 };
 
 ref class human : public character {
 public:
 	human() {
-
-	}
-
-	void setCharacter() {
 		race = "Human";
 		setGender();
 		setSexualOrientation();
 		setAge();
+	}
+
+};
+
+ref class elf : public character {
+public:
+	elf() {
+		race = "Elf";
+		setGender();
+		setSexualOrientation();
+		setAge();
+	}
+
+	void setAge() {
+		int minAge = 10;
+		int maxAge = 700;
+
+		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
+
+		age = rand->Next(minAge, maxAge + 1);
 	}
 };

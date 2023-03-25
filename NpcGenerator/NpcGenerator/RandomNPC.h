@@ -2,6 +2,9 @@
 
 #include "CharacterClass.cpp";
 
+#include <cstdlib>;
+#include <ctime>;
+
 namespace NpcGenerator {
 
 	using namespace System;
@@ -631,13 +634,23 @@ namespace NpcGenerator {
 	private: System::Void RandomNPC_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btn_generate_npc_Click(System::Object^ sender, System::EventArgs^ e) {
-		human npc;
-		npc.setCharacter();
 
-		lbl_age_output->Text = gcnew String(Convert::ToString(npc.age));
-		lbl_race_output->Text = npc.race;
-		lbl_gender__output->Text = npc.gender;
-		lbl_sOrientation_output->Text = npc.sexualOrientation;
+		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
+
+		character^ npc;
+
+		if (rand->Next(0, 2) == 0) {
+			npc = gcnew human();
+		}
+		else {
+			npc = gcnew elf();
+		}
+
+
+		lbl_age_output->Text = gcnew String(Convert::ToString(npc->age));
+		lbl_race_output->Text = npc->race;
+		lbl_gender__output->Text = npc->gender;
+		lbl_sOrientation_output->Text = npc->sexualOrientation;
 	}
 	};
 }
