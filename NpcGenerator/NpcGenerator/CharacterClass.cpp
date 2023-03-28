@@ -34,34 +34,34 @@ public:
 	}
 
 	void setSexualOrientation() {
-		int heterosexualProb = 25;
-		int homosexualProb = 25;
-		int bisexualProb = 25;
-		int asexualProb = 25;
+		array<String^>^ arr = gcnew array<String^>(4);
+		arr[0] = "Heterosexual";
+		arr[1] = "Homosexual";
+		arr[2] = "Bisexual";
+		arr[3] = "Asexual";
+
+		double prob[] = {0.25, 0.25, 0.25 , 0.25 };
+
+		double totalProb = 0.0;
+		for (int i = 0; i < 4; i++) {
+			totalProb += prob[i];
+		}
+		for (int i = 0; i < 4; i++) {
+			prob[i] /= totalProb;
+		}
 
 		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
+		double randomProb = rand->NextDouble();
 
-		int maxNum = 100;
-		int aux = rand->Next(1, maxNum + 1);
+		int selectedIndex = 0;
+		double cumulativeProb = prob[0];
 
-		int newA, newB, newC, newD;
-		newA = maxNum / 100 * heterosexualProb;
-		newB = newA + maxNum / 100 * homosexualProb;
-		newC = newB + maxNum / 100 * bisexualProb;
-		newD = newC + maxNum / 100 * asexualProb;
+		while (randomProb > cumulativeProb && selectedIndex < 4) {
+			selectedIndex++;
+			cumulativeProb += prob[selectedIndex];
+		}
 
-		if (aux < newA) {
-			sexualOrientation = "Heterosexual";
-		}
-		else if (aux >= newA && aux < newB) {
-			sexualOrientation = "Homosexual";
-		}
-		else if (aux >= newB && aux < newC) {
-			sexualOrientation = "Bisexual";
-		}
-		else if (aux >= newC && aux < newD) {
-			sexualOrientation = "Asexual";
-		}
+		sexualOrientation = arr[selectedIndex];
 	}
 
 	void setAge() {
