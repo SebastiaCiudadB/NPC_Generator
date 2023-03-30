@@ -660,6 +660,7 @@ namespace NpcGenerator {
 		lbl_skinColor_output->Text = npc->skinColor;
 		lbl_eyeColor_output->Text = npc->eyeColor;
 		lbl_hairColor_output->Text = npc->hairColor;
+		lbl_hairStile_output->Text = npc->hairStile;
 	}
 	};
 }

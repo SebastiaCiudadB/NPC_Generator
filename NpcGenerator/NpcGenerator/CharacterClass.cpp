@@ -99,7 +99,7 @@ public:
 		arr[7] = "Fat";
 		arr[8] = "Obese";
 
-		double prob[] = { 0.05, 0.1, 0.3 , 0.3, 0.2, 0.2, 0.1 , 0.1, 0.05 };
+		double prob[] = { 0.05, 0.1, 0.25, 0.25, 0.2, 0.2, 0.1, 0.1, 0.05 };
 
 		double totalProb = 0.0;
 		for (int i = 0; i < arrayLenaght; i++) {
@@ -253,7 +253,46 @@ public:
 	}
 
 	void setHairStile() {
+		int arrayLenaght = 14;
 
+		array<String^>^ arr = gcnew array<String^>(arrayLenaght);
+		arr[0] = "Crew cut";
+		arr[1] = "Shaved head";
+		arr[2] = "Bald jead";
+		arr[3] = "Long hair";
+		arr[4] = "Spiky";
+		arr[5] = "Dreads";
+		arr[6] = "Culry Long";
+		arr[7] = "Culry Short";
+		arr[8] = "Bun";
+		arr[9] = "Ponytail";
+		arr[10] = "Pigtails";
+		arr[11] = "Braid";
+		arr[12] = "Braids";
+		arr[13] = "Long wavy";
+
+		double prob[] = { 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1 };
+
+		double totalProb = 0.0;
+		for (int i = 0; i < arrayLenaght; i++) {
+			totalProb += prob[i];
+		}
+		for (int i = 0; i < arrayLenaght; i++) {
+			prob[i] /= totalProb;
+		}
+
+		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
+		double randomProb = rand->NextDouble();
+
+		int selectedIndex = 0;
+		double cumulativeProb = prob[0];
+
+		while (randomProb > cumulativeProb && selectedIndex < 4) {
+			selectedIndex++;
+			cumulativeProb += prob[selectedIndex];
+		}
+
+		hairStile = arr[selectedIndex];
 	}
 };
 
@@ -272,6 +311,7 @@ public:
 		setSkinColor();
 		setEyeColor();
 		setHairColor();
+		setHairStile();
 	}
 };
 
@@ -290,6 +330,7 @@ public:
 		setSkinColor();
 		setEyeColor();
 		setHairColor();
+		setHairStile();
 	}
 
 
