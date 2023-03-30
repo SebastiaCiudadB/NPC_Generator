@@ -656,6 +656,10 @@ namespace NpcGenerator {
 		lbl_size_output->Text = npc->size;
 		lbl_constitution_output->Text = npc->constitution;
 		lbl_height_output->Text = gcnew String(Convert::ToString(npc->height));
+
+		lbl_skinColor_output->Text = npc->skinColor;
+		lbl_eyeColor_output->Text = npc->eyeColor;
+		lbl_hairColor_output->Text = npc->hairColor;
 	}
 	};
 }
