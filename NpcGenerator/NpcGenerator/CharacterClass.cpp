@@ -1,10 +1,13 @@
 #include <cstdlib>;
 #include <ctime>;
 
+#include "RandomNPC.h";
+
 using namespace System;
 
 ref class character {
 public:
+
 
 	String^ race;
 	String^ gender;

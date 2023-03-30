@@ -14,6 +14,13 @@ namespace NpcGenerator {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+
+
+	public ref class FormData {
+	public:
+		Label^ label1;
+	};
+
 	/// <summary>
 	/// Resumen de RandomNPC
 	/// </summary>
@@ -23,6 +30,8 @@ namespace NpcGenerator {
 		RandomNPC(void)
 		{
 			InitializeComponent();
+
+			FormData^ formData = gcnew FormData();
 
 			//
 			//TODO: agregar código de constructor aquí
@@ -40,6 +49,7 @@ namespace NpcGenerator {
 				delete components;
 			}
 		}
+
 	private: System::Windows::Forms::Panel^ pnl_correccion;
 	protected:
 	private: System::Windows::Forms::Panel^ pnl_titulo;
@@ -632,6 +642,7 @@ namespace NpcGenerator {
 
 		}
 #pragma endregion
+
 	private: System::Void RandomNPC_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btn_generate_npc_Click(System::Object^ sender, System::EventArgs^ e) {
