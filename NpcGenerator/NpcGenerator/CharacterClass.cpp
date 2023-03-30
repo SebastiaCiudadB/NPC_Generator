@@ -5,6 +5,7 @@ using namespace System;
 
 ref class character {
 public:
+
 	String^ race;
 	String^ gender;
 	String^ sexualOrientation;
@@ -34,7 +35,9 @@ public:
 	}
 
 	void setSexualOrientation() {
-		array<String^>^ arr = gcnew array<String^>(4);
+		int arrayLenaght = 4;
+
+		array<String^>^ arr = gcnew array<String^>(arrayLenaght);
 		arr[0] = "Heterosexual";
 		arr[1] = "Homosexual";
 		arr[2] = "Bisexual";
@@ -43,10 +46,10 @@ public:
 		double prob[] = {0.25, 0.25, 0.25 , 0.25 };
 
 		double totalProb = 0.0;
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < arrayLenaght; i++) {
 			totalProb += prob[i];
 		}
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < arrayLenaght; i++) {
 			prob[i] /= totalProb;
 		}
 
@@ -83,39 +86,41 @@ public:
 	}
 
 	void setConstitution() {
-		int slimProb = 20;
-		int skinnyProb = 20;
-		int normalProb = 20;
-		int strongProb = 20;
-		int muscularProb = 20;
+		int arrayLenaght = 9;
+
+		array<String^>^ arr = gcnew array<String^>(arrayLenaght);
+		arr[0] = "Skinny";
+		arr[1] = "Slim";
+		arr[2] = "Normal";
+		arr[3] = "Heafty";
+		arr[4] = "Strong";
+		arr[5] = "Robust";
+		arr[6] = "Brawny";
+		arr[7] = "Fat";
+		arr[8] = "Obese";
+
+		double prob[] = { 0.05, 0.1, 0.3 , 0.4, 0.2, 0.2, 0.1 , 0.1, 0.05 };
+
+		double totalProb = 0.0;
+		for (int i = 0; i < arrayLenaght; i++) {
+			totalProb += prob[i];
+		}
+		for (int i = 0; i < arrayLenaght; i++) {
+			prob[i] /= totalProb;
+		}
 
 		Random^ rand = gcnew Random(DateTime::Now.Millisecond);
+		double randomProb = rand->NextDouble();
 
-		int maxNum = 100;
-		int aux = rand->Next(1, maxNum + 1);
+		int selectedIndex = 0;
+		double cumulativeProb = prob[0];
 
-		int newA, newB, newC, newD, newE;
-		newA = maxNum / 100 * slimProb;
-		newB = newA + maxNum / 100 * skinnyProb;
-		newC = newB + maxNum / 100 * normalProb;
-		newD = newC + maxNum / 100 * strongProb;
-		newE = newD + maxNum / 100 * muscularProb;
+		while (randomProb > cumulativeProb && selectedIndex < 4) {
+			selectedIndex++;
+			cumulativeProb += prob[selectedIndex];
+		}
 
-		if (aux < newA) {
-			constitution = "Slim";
-		}
-		else if (aux >= newA && aux < newB) {
-			constitution = "Skinny";
-		}
-		else if (aux >= newB && aux < newC) {
-			constitution = "Normal";
-		}
-		else if (aux >= newC && aux < newD) {
-			constitution = "Strong";
-		}
-		else if (aux >= newD && aux < newE) {
-			constitution = "Muscular";
-		}
+		constitution = arr[selectedIndex];
 	}
 
 	void setHeight() {
@@ -143,6 +148,22 @@ public:
 			height = minHeight + (rand->NextDouble() * maxHeight);
 		}*/
 	}
+
+	void setSkinColor() {
+
+	}
+
+	void setEyeColor() {
+
+	}
+
+	void setHairColor() {
+
+	}
+
+	void setHairStile() {
+
+	}
 };
 
 ref class human : public character {
@@ -156,7 +177,6 @@ public:
 		setConstitution();
 		setHeight();
 	}
-
 };
 
 ref class elf : public character {
@@ -170,6 +190,7 @@ public:
 		setConstitution();
 		setHeight();
 	}
+
 
 	void setAge() {
 		int minAge = 10;
